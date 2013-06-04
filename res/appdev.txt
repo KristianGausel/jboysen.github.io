@@ -1,0 +1,102 @@
+Title (DK): 
+
+Title (EN): Advanced iOS Application Development
+
+Points (ECTS): 10
+
+Department: IMM
+
+External Institution: Stanford, Shape, Making Fun, and others.
+
+Course Comments: This represents a second course in a course series in
+programming mobile devices (primarily, iOS and Android).
+
+Number of students (min/max): 10/unlimited
+
+Education: B.Eng/MSc
+
+Schedule: Winter
+
+Scope: recorded online lectures, interactive lab sessions with contact
+time with instructor, occasional face-to-face lectures and small group
+activities, regular exercises and homework assignments
+
+Duration of course: 13-weeks
+
+Examination: special day
+
+Assessment: written examination and task(s)
+
+Exam duration: short oral exam
+
+Aid: all (written, internet, etc.)
+
+Evaluation: pass/not pass, internal examiner
+
+Previous course: none
+
+Together with: none
+
+Prerequisites: Preferably, knowledge of Objective-C.  Optionally,
+knowledge of OO programming and basic and advanced programming
+concepts such as data types, conditionals, loops, functions, etc. and
+blocks, delegates, concurrency primitives, design patterns,
+architecture styles, etc.  Example courses that would fulfill such
+include, but are not limited to: 02101, 02102, 02102, 02312, 02314,
+02319, 02324, 02350, and 02393.
+
+General course description:
+
+Advanced Application Development for iOS focuses on helping a driven,
+independent student learn iOS programming from first principles, but
+within the context of modern, advanced software engineering.  iOS
+development is done using the Objective-C programming language, a
+minimal OO programming language based upon the C programming language,
+incorporating ideas from the OO language Smalltalk.  It is the primary
+development language for Apple's operating systems, including OS X and
+iOS.  This course includes material to introduce the student to the
+Objective-C programming language, but the focus of the course is not
+on learning the language, but on learning the APIs, software
+engineering practices, and associated tools for general-purpose
+iOS app development.
+
+Learning objectives:
+
+A student who has met the objectives of this course will be able to:
+
+- program in the Objective-C programming language for iOS
+- understand and explain the object model of Objective-C
+- reflect upon the history of, and influences into, the design of
+  Objective-C
+- understand memory and performance issues that are particular to
+  Objective-C
+- use in an intermediate-to-advanced fashion the XCode IDE
+- program medium-complexity apps for the iOS platform
+- understand and explain the main subsystems and APIs of iOS
+- perform analysis, design, implementation, and validation of iOS
+  applications
+
+Contents:
+
+The Objective-C programming language; the XCode IDE; the core concepts
+of Objective-C that differentiate it from C and other OO languages;
+software engineering with Objective-C including build systems, version
+control, configuration management, core APIs and frameworks; iOS
+frameworks and APIs; App development-centric processes, methodologies,
+concepts, and tools
+
+Literature:
+
+All are available via http://developer.apple.com/
+
+Responsible:
+Joseph Kiniry (jkin@imm.dtu.dk)
+
+Home page: https://appfactory-dtu.podio.com/ios-course/
+
+Notes:
+
+- Course materials being reused from Stanford.
+
+- Guest speakers may be participating from DK and US companies in the
+mobile app space.
