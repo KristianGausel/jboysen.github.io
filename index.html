@@ -3,81 +3,100 @@
 <head>
   <title>jboysen.dk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <style type="text/css">
-  body {
-    background-image: url('img/bg.png');
-    background-color: #eeeeee;
-  }
-  .anchor {
-    position: relative;
-    top: -82px;
-  }
-  header {
-    background-color: #000000;
-    padding: 40px;
-  }
-  .affix {
-    top:0;
-  }
-  header h1, header h2 {
-    color: white;
-  }
-  h1 {
-    font-size: 30pt;
-  }
-  .nav-container {
-    padding-top: 20px;
-    background-image: url('img/bg.png');
-    background-color: #eeeeee;
-  }
-  .nav-placeholder {
-    display: none;
-  }
-  table {
-    background-color: white;
-  }
-  </style>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="0">
 
   <header>
-    <div class="container">
-      <h1>Jakob Jakobsen Boysen</h1>
-      <h2></h2>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="nav-container">
-      <div class="navbar container">
-        <div class="navbar-inner">
-          <a class="brand" href="#">jboysen.dk</a>
-          <ul class="nav">
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Education <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#msc">Master</a></li>
-                <li><a href="#bsc">Bachelor</a></li>
-                <li class="divider"></li>
-                <li><a href="#resources">Notes</a></li>
-              </ul>
-            </li>
-          </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span3 visible-desktop"></div>
+        <div class="span9">
+          <h1>Jakob Jakobsen Boysen</h1>
+          <h2>Something clever</h2>
         </div>
       </div>
     </div>
-    <div class="nav-placeholder">&nbsp;</div>
+  </header>
 
-    <a class="anchor" id="home">&nbsp;</a>
-    <h1>Welcome!</h1>
-    <p>This is my personal home page.</p>
+  <div class="nav-container">
 
-    <a class="anchor" id="contact">&nbsp;</a>
-    <h1>Contact</h1>
-    <p></p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span3 visible-desktop"></div>
+        <div class="span9">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <a class="brand" href="">jboysen.dk</a>
+              <ul class="nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Education <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#msc">Master</a></li>
+                    <li><a href="#bsc">Bachelor</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#resources">Notes</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="nav-placeholder">&nbsp;</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="span3 visible-desktop"></div>
+      <div class="span9">
+        <a class="anchor" id="home">&nbsp;</a>
+        <h1>Welcome!</h1>
+        <p>This is my personal home page.</p>
+
+        <a class="anchor" id="contact">&nbsp;</a>
+        <h1>Contact</h1>
+        <p>I can be found through the following channels:</p>
+        <div class="row">
+          <div class="span3">
+            <p class="text-center">Social</p>
+            <p class="text-center contact-icon"><a href="https://www.facebook.com/jakob.boysen" target="_blank"><i class="icon-facebook-sign"></i></a></p>
+          </div>
+          <div class="span3">
+            <p class="text-center">Professional</p>
+            <p class="text-center contact-icon"><a href="http://dk.linkedin.com/in/jakobboysen" target="_blank"><i class="icon-linkedin-sign"></i></a></p>
+          </div>
+          <div class="span3">
+            <p class="text-center">Code</p>
+            <p class="text-center contact-icon"><a href="https://github.com/jboysen" target="_blank"><i class="icon-github-sign"></i></a></p>
+          </div>
+        </div>
+
+        <p>Or you can contact me directly by <script type="text/javascript" language="javascript">
+        { coded = "Ng7C6@N6Cmjlu.47"
+        key = "rQksGFimvtM5fRDcSn7j8VqdH3wox9WbpuzNE1K4I0aCeYL6JhP2OyBAXZgTlU"
+        shift=coded.length
+        link=""
+        for (i=0; i<coded.length; i++) {
+          if (key.indexOf(coded.charAt(i))==-1) {
+            ltr = coded.charAt(i)
+            link += (ltr)
+          }
+          else {     
+            ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+        document.write("<a href='mailto:"+link+"'>e-mailing</a>")
+      }
+
+    </script> me.</p>
 
     <a class="anchor" id="msc">&nbsp;</a>
     <h1>Education</h1>
@@ -274,41 +293,54 @@
         <a class="anchor" id="notes">&nbsp;</a>
         <h2>Notes (in danish)</h2>
         <a href="res/noter/" target="_blank">List</a> or at <a href="https://github.com/jboysen/jboysen.github.io/tree/master/res/noter" target="_blank">github</a>
+
       </div>
+    </div>
+  </div>
 
-      <br />
-      <br />
+  <br />
+  <br />
 
-      <script src="http://code.jquery.com/jquery.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script type="text/javascript">
-      $(document).on('scroll', function(event) {
-        var top = $(this).scrollTop()
-        y = $('header').outerHeight(),
-        $menu = $('.nav-container'),
-        $placeholder = $('.nav-placeholder');
-        if (top > y) {
-          $menu.addClass('affix');
-          $placeholder.css('height', $menu.outerHeight()+'px').show();
-        } else {
-          $menu.removeClass('affix');
-          $placeholder.hide();
-        }
-      });
-      </script>
-      <script type="text/javascript">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).on('scroll', function(e) {
+    var top = $(this).scrollTop()
+    y = $('header').outerHeight(),
+    $menu = $('.nav-container'),
+    $placeholder = $('.nav-placeholder');
+    if (top > y) {
+      $menu.addClass('affix');
+      $placeholder.css('height', $menu.outerHeight()+'px').show();
+    } else {
+      $menu.removeClass('affix');
+      $placeholder.hide();
+    }
+  });
+  $('a[href^="#"]').on('click',function (e) {
+    e.preventDefault();
+    var target = this.hash,
+    $target = $(target);
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top
+    }, 500, 'swing', function () {
+      window.location.hash = target;
+    });
+  });
+  </script>
+  <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-25480624-1']);
-      _gaq.push(['_setDomainName', 'jboysen.dk']);
-      _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25480624-1']);
+  _gaq.push(['_setDomainName', 'jboysen.dk']);
+  _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-      </script>
-    </body>
-    </html>
+  </script>
+</body>
+</html>
