@@ -1,336 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>jboysen.dk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
+---
+layout: default
+title: Blog
+---
 
-  <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span1 visible-desktop"></div>
-        <div class="span9">
-          <h1>Jakob Jakobsen Boysen</h1>
-          <h3 class="text-right"><em>"Don't reinvent the wheel"</em></h3>
-        </div>
-      </div>
-    </div>
-  </header>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-  <div class="nav-container">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span1 visible-desktop">
-        </div>
-        <div class="span9">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <a class="brand" href=""> jboysen.dk</a>
-              <ul class="nav">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#contact">Contact <i class="icon-envelope"></i></a></li>
-                <li><a href="#cv">CV</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Education <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#msc">Master</a></li>
-                    <li><a href="#bsc">Bachelor</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#notes">Notes</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    {{ post.content }}
   </div>
-  <div class="nav-placeholder">&nbsp;</div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="span1 visible-desktop">
-        <div class="show-on-scroll affix">
-          <p></p>
-        </div>
-      </div>
-      <div class="span9">
-        <a class="anchor" id="home">&nbsp;</a>
-        <h1>Welcome!</h1>
-        <p>This is my personal home page.</p>
-
-        <a class="anchor" id="contact">&nbsp;</a>
-        <h1>Contact</h1>
-        <p>I can be found through the following channels:</p>
-        <div class="row">
-          <div class="span3">
-            <p class="text-center">Social</p>
-            <p class="text-center contact-icon"><a href="https://www.facebook.com/jakob.boysen" target="_blank"><i class="icon-facebook-sign"></i></a></p>
-          </div>
-          <div class="span3">
-            <p class="text-center">Professional</p>
-            <p class="text-center contact-icon"><a href="http://dk.linkedin.com/in/jakobboysen" target="_blank"><i class="icon-linkedin-sign"></i></a></p>
-          </div>
-          <div class="span3">
-            <p class="text-center">Code</p>
-            <p class="text-center contact-icon"><a href="https://github.com/jboysen" target="_blank"><i class="icon-github-sign"></i></a></p>
-          </div>
-        </div>
-
-        <p>Or you can contact me directly by e-mailing me (guess my email - my name is jakob and this domain is jboysen.dk).</p>
-
-        <a class="anchor" id="cv">&nbsp;</a>
-        <h2>Curriculum Vitae</h2>
-        <p>View my curriculum vitae at <a href="http://rawgithub.com/jboysen/cv/master/cv.pdf" target="_blank">github.com</a>.</p>
-
-
-        <a class="anchor" id="msc">&nbsp;</a>
-        <h2>M.Sc.Eng. in Computer Science</h2>
-        <p>September 2011 I started my master's degree at <abbr title="DTU">Technical University of Denmark</abbr> in Lyngby nearby Copenhagen. During the 2,5 years I used on finishing my degree I attended the following courses:</p>
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <td colspan="2"></td>
-              <th>ECTS</th>
-              <th></th>
-            </tr>
-            <tr>
-              <th>S5 (fall 2013)</th>
-              <td>Master&#39;s thesis</td>
-              <td>30</td>
-              <td>[external]</td>
-            </tr>
-            <tr>
-              <th rowspan="3">S4 (spring 2013)</th>
-              <td><a href="http://www.kurser.dtu.dk/02224.aspx?menulanguage=en-GB" target="_blank">02224</a> Real-time Systems</td>
-              <td>5</td>
-              <td>[TS]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02233.aspx?menulanguage=en-GB" target="_blank">02233</a> Network Security</td>
-              <td>5</td>
-              <td>[TS]</td>
-            </tr>
-            <tr>
-              <td>Special Course: Advanced iOS Application Development</td>
-              <td>10</td>
-              <td><a href="cs/appdev.txt" target="_blank">[description]</a></td>
-            </tr>
-            <tr>
-              <th rowspan="3">S3 (fall 2012)</th>
-              <td><a href="http://www.kurser.dtu.dk/02239.aspx?menulanguage=en-GB" target="_blank">02239</a> Data Security</td>
-              <td>7.5</td>
-              <td>[G]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02242.aspx?menulanguage=en-GB" target="_blank">02242</a> Program Analysis</td>
-              <td>7.5</td>
-              <td>[SL][external][G]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02295.aspx?menulanguage=en-GB" target="_blank">02295</a> Special Course: A DSL for the extended Job-Shop Scheduling Problem</td>
-              <td>5</td>
-              <td><a href="cs/02295.pdf" target="_blank">[paper]</a></td>
-            </tr>
-            <tr>
-              <th>June 2012</th>
-              <td><a href="http://www.kurser.dtu.dk/01435.aspx?menulanguage=gb" target="_blank">01435</a> Practical Cryptoanalysis</td>
-              <td>5</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th rowspan="3">S2 (spring 2012)</th>
-              <td><a href="http://www.kurser.dtu.dk/02220.aspx?menulanguage=en-GB" target="_blank">02220</a> Distributed systems</td>
-              <td>7.5</td>
-              <td>[SL][G]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02241.aspx?menulanguage=en-GB" target="_blank">02241</a> Robust Software Systems (5 ECTS)</td>
-              <td>5</td>
-              <td>[TS][SL]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02244.aspx?menulanguage=en-GB" target="_blank">02244</a> Language Based Security (7.5 ECTS) </td>
-              <td>7.5</td>
-              <td>[TS][SL]</td>
-            </tr>
-            <tr>
-              <th>January 2012</th>
-              <td><a href="http://www.kurser.dtu.dk/02231.aspx?menulanguage=en-GB" target="_blank">02231</a> Advanced Modelling and Analysis of Embedded Systems</td>
-              <td>5</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th rowspan="3">S1 (fall 2011)</th>
-              <td><a href="http://www.kurser.dtu.dk/02223.aspx?menulanguage=en-GB" target="_blank">02223</a> Fundamentals of Modern Embedded Systems</td>
-              <td>7.5</td>
-              <td>[SL][G]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/02228.aspx?menulanguage=en-GB" target="_blank">02228</a> Safety-Critical Embedded Systems</td>
-              <td>7.5</td>
-              <td>[TS]</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.kurser.dtu.dk/42435.aspx?menulanguage=en-GB" target="_blank">42435</a> Knowledge based Entrepreneurship</td>
-              <td>5</td>
-              <td>[partly mandatory][external][G]</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>To get a master's degree at DTU you have to meet certain requirements. For the study line I chose the requirements are listed below:</p>
-
-        <dl>
-          <dt>General competences [G]</dt>
-          <dd>At least 30 ECTS: 35 ECTS</dd>
-          <dt>Technological specialization [TS]</dt>
-          <dd>At least 30 ECTS: 30 ECTS</dd>
-          <dt>Study line: Reliable Software Systems [SL]</dt>
-          <dd>At least 30 ECTS: 35 ECTS</dd>
-        </dl>
-
-        <a class="anchor" id="bsc">&nbsp;</a>
-        <h2>B.Sc. in Computer Science</h2>
-        <p>In the summer of 2008 I began studying Computer Science at the University of Aarhus. You can see more at <a href="http://cs.au.dk" target="_blank">cs.au.dk</a> which is Aarhus University&#39;s compsci department&#39;s website. Or you can read Aarhus University&#39;s <a href="http://www.science.au.dk/uddannelse/bacheloruddannelser/datalogi" target="_blank">educational description of compsci</a>.</p>
-        <p>My bachelor&#39;s degree in computer science consists of the following courses:</p>
-        <table class="table table-bordered">
-          <tbody>
-           <tr>
-            <th rowspan="2">S6 (spring 2011)</th>
-            <th>Q4</th>
-            <td rowspan="2"><span style="color: rgb(128, 0, 0);">Embedded Linux (ITLNX1) + </span><br /><span style="color: rgb(128, 0, 0);">Software test 1 (I4SWT1)</span></td>
-            <td rowspan="2">Eksperimentel Systemudvikling (EkspSys)</td>
-            <td>Kombinatorisk S&oslash;gning (dKS)</td>
-          </tr>
-          <tr>
-            <th>Q3</th>
-            <td>Optimering (dOpt)</td>
-          </tr>
-          <tr>
-            <th rowspan="2">S5 (fall 2010)</th>
-            <th>Q2</th>
-            <td rowspan="2"><span style="color: rgb(128, 0, 0);">Computerarkitektur (E1CPAA) +</span><br /><span style="color: rgb(128, 0, 0);">Windowsprogrammering 1 (I4WIN1)</span></td>
-            <td><span style="color: rgb(128, 0, 0);">Objekt-orienteret Middleware (TIOOMI)</span></td>
-            <td rowspan="2">Overs&aelig;ttelse (dOvs)</td>
-          </tr>
-          <tr>
-            <th>Q1</th>
-            <td><span style="color: rgb(128, 0, 0);">Java Embedded (ITJEM1)</span></td>
-          </tr>
-          <tr>
-            <th rowspan="2">S4 (spring 2010)</th>
-            <th>Q4</th>
-            <td>Datalogiens Videnskabsteori</td>
-            <td rowspan="2"><span style="color: rgb(0, 0, 128);">Line&aelig;r Algebra</span></td>
-            <td>Sikkerhed (dSik)</td>
-          </tr>
-          <tr>
-            <th>Q3</th>
-            <td><span style="color: rgb(0, 0, 128);">Matematisk Modellering 1</span></td>
-            <td>Distribuerede Systemer (dDist)</td>
-          </tr>
-          <tr>
-            <th rowspan="2">S3 (fall 2009)</th>
-            <th>Q2</th>
-            <td><span style="color: rgb(0, 0, 128);">Introduktion til matematisk modellering</span></td>
-            <td>Operativsystemer (dOpSys)</td>
-            <td>Software Arkitektur (dSoftArk)</td>
-          </tr>
-          <tr>
-            <th>Q1</th>
-            <td>Beregnelighed og Logik (dBerLog)</td>
-            <td>Concurrency (dConc)</td>
-            <td>Databaser (dDB)</td>
-          </tr>
-          <tr>
-            <th rowspan="2">S2 (spring 2009)</th>
-            <th>Q4</th>
-            <td>Programmeringssprog (dProgSprog)</td>
-            <td>Algoritmer og Datastrukturer 2 (dADS2)</td>
-            <td>Regularitet og Automater (dRegAut)</td>
-          </tr>
-          <tr>
-            <th>Q3</th>
-            <td>Interaktionsdesign</td>
-            <td>Algoritmer og Datastrukturer 1 (dADS1)</td>
-            <td>Webteknologi (dWebTek)</td>
-          </tr>
-          <tr>
-            <th rowspan="2">S1 (fall 2008)</th>
-            <th>Q2</th>
-            <td><span style="color: rgb(0, 0, 128);">Calculus 2</span></td>
-            <td>Programmering 2 (dProg2)</td>
-            <td>Computere og Netv&aelig;rk (dComNet)</td>
-          </tr>
-          <tr>
-            <th>Q1</th>
-            <td><span style="color: rgb(0, 0, 128);">Calculus 1</span></td>
-            <td>Introduktion til programmering (dIntProg)</td>
-            <td>Perspektiverende Datalogi (dPersp)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>Courses written with <span style="color: rgb(0, 0, 128);">dark blue</span> font color are math courses and courses written with <span style="color: rgb(128, 0, 0);">dark red</span> color are engineering courses attended at Engineering School of Aarhus.</p>
-
-      <a class="anchor" id="notes">&nbsp;</a>
-      <h2>Notes (in danish)</h2>
-      <a href="cs/noter/" target="_blank">List</a> or at <a href="https://github.com/jboysen/jboysen.github.io/tree/master/cs/noter" target="_blank">github</a>
-
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
-<br />
-<br />
-
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).on('scroll', function(e) {
-  var top = $(this).scrollTop()
-  y = $('header').outerHeight(),
-  $menu = $('.nav-container'),
-  $placeholder = $('.nav-placeholder'),
-  $left = $('.show-on-scroll');
-  if (top > y) {
-    $menu.addClass('affix');
-    $left.show();
-    $placeholder.css('height', $menu.outerHeight()+'px').show();
-  } else {
-    $menu.removeClass('affix');
-    $left.hide();
-    $placeholder.hide();
-  }
-});
-$('a[href^="#"]').on('click',function (e) {
-  e.preventDefault();
-  var target = this.hash,
-  $target = $(target);
-  $('html, body').stop().animate({
-    'scrollTop': $target.offset().top+1
-  }, 500, 'swing', function () {
-    window.location.hash = target;
-  });
-});
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-25480624-3', 'jboysen.dk');
-  ga('send', 'pageview');
-
-</script>
-</body>
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
