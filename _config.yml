@@ -10,14 +10,11 @@ title:            Jakob Jakobsen Boysen
 tagline:          ''
 description:      'Personal web page.'
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+#author:
+#  name:           'Mark Otto'
+#  url:            https://twitter.com/mdo
 
 paginate:         5
 
 # Custom vars
-version:          2.0.0
-
-github:
-  repo:           https://github.com/poole/hyde
+#version:          2.0.0
