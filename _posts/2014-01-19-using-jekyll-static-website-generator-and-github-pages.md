@@ -10,7 +10,7 @@ When I added this blog to the domain I realised that I need something more power
 
 The research began and I found several options, mostly based on [Jekyll](http://www.jekyllrb.com), a static website generator. I found [Jekyll Bootstrap](http://jekyllbootstrap.com/) which comes with a few features out of the box (comments, tags, categories, etc.) but with the default Twitter Bootstrap theme. Then I found [Jekyll Themes](http://jekyllthemes.org/) which has a bunch of different themes to use with Jekyll. But I couldn't find a very simple, elegant layout.
 
-A last I came across [Poole](http://getpoole.com/), a simple foundation for Jekyll. It has two themes of which I chose [Hyde](https://github.com/poole/hyde).
+At last I came across [Poole](http://getpoole.com/), a simple foundation for Jekyll. It has two themes of which I chose [Hyde](https://github.com/poole/hyde).
 
 ## Setting it all up
 
@@ -28,10 +28,10 @@ Alternatively the markdown can be viewed directly in the browser by updating the
 
 ## Using GitHub pages
 
-Finally to host everything on GitHub the repository `USERNAME.github.io` should be created and everything that should be accessible should be pushed to this repo. GitHub Pages support Jekyll out of the box, thus when a repository with the Jekyll directory structure is pushed, the static pages are generated instantly when accessed through the url `http://USERNAME.github.io`.
+Finally to host everything on GitHub the repository `USERNAME.github.io` has to be created and everything that should be accessible must be pushed to this repo. GitHub Pages support Jekyll out of the box, thus when a repository with the Jekyll directory structure is pushed, the static pages are generated instantly when accessed through the url `http://USERNAME.github.io`.
 
 To use a custom domain the DNS settings should be updated as described here: [https://help.github.com/articles/setting-up-a-custom-domain-with-pages](https://help.github.com/articles/setting-up-a-custom-domain-with-pages).
 
-That's about it. A simple version-controlled, free hosted blog engine is set up. Blog posts can even by submitted directly through the GitHub repository web interface, as GitHub supports creation of new file via the web interface. 
+That's about it. A simple version-controlled, free hosted blog engine is set up. Blog posts can even by submitted directly through the GitHub repository web interface, as GitHub supports creation of new files via the web interface. 
 
 Go to [https://github.com/jboysen/jboysen.github.io](https://github.com/jboysen/jboysen.github.io) to see the details of the config-file and directory structure of this site.
