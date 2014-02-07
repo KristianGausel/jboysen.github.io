@@ -36,5 +36,7 @@ Giving the output:
 	MongoDB shell version: 2.4.9
 	connecting to: test
 	> 
+
+For easy listing of databases, collections and data the the [MongoHub GUI](http://docs.mongodb.org/ecosystem/tools/administration-interfaces/#mongohub) is strongly recommended.
 	
 The next blog post will be about creating users with appropriate permissions.
