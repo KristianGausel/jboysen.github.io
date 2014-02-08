@@ -1,3 +1,6 @@
 div.posts hr {
   border-color: #202020;
 }
+div.post p {
+  font-size: 17px;
+}

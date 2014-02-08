@@ -12,7 +12,7 @@ title: Blog
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }} | <a href="{{ post.url }}#share">Share</a> | <a href="{{ post.url }}#disqus_thread">Comment</a></span>
+    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }} | <a href="{{ post.url }}#share">Share</a> | <a href="{{ post.url }}#disqus_thread">Comment</a></span>
 
     {{ post.content }}
 
